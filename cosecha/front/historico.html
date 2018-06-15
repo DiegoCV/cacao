@@ -150,56 +150,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       <th>Fecha Cosecha</th>
                       <th>Cantidad (Sacos)</th>
                     </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr class="table-warning">
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr class="table-success">
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr class="table-danger">
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr class="table-info">
-                      <th scope="row"></th>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>                    
+          </thead>
+                  <tbody id="cosechalista">
+                                     
                   </tbody>
                 </table>
             </div> 
@@ -223,32 +176,14 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     
     <!--Core Javascript -->
     <script>
-        new Chart(document.getElementById("myChart-nav").getContext('2d'), {
-          type: 'doughnut',
-          data: {
-            labels: ["M", "T", "W", "T", "F", "S", "S"],
-            datasets: [{
-              backgroundColor: [
-                "#2ecc71",
-                "#3498db",
-                "#95a5a6",
-                "#9b59b6",
-                "#f1c40f",
-                "#e74c3c",
-                "#34495e"
-              ],
-              data: [12, 19, 3, 17, 28, 24, 7]
-            }]
-          },
-          options: {
-              legend: { display: false },
-              title: {
-                display: true,
-                text: ''
-               } 
-            }
+        $(document).ready(function () {
+        $.post('../back/outerController/cosecha/CosechaListByFinca.php').done(function(result){
+          $('#cosechalista').html(result);
         });
+      });
     </script>
+
+
 </body>
 
 </html>

@@ -139,6 +139,30 @@ $cOSECHAFECHA_REGISTRO=$cosecha->getCOSECHAFECHA_REGISTRO();
       }
   }
 
+   public function CosechaListByFinca($idfinca){
+      $lista = array();
+      try {
+          $sql ="SELECT * FROM `cosecha` INNER JOIN `cultivo` ON (`cosecha`.`CULTIVO_idCULTIVO` = `cultivo`.`idCULTIVO`)
+INNER JOIN `sector` ON (`cultivo`.`SECTOR_idSECTOR` = `sector`.`idSECTOR`) INNER JOIN `finca` ON(`sector`.`FINCA_idFINCA` = `finca`.`idFinca`) WHERE `finca`.`idFinca` = $idfinca";
+          $data = $this->ejecutarConsulta($sql);
+          for ($i=0; $i < count($data) ; $i++) {
+              $cosecha= new Cosecha();
+          $cosecha->setIdCOSECHA($data[$i]['idCOSECHA']);
+           $cultivo = new Cultivo();
+           $cultivo->setIdCULTIVO($data[$i]['CULTIVO_idCULTIVO']);
+           $cosecha->setCULTIVO_idCULTIVO($cultivo);
+          $cosecha->setCOSECHA_SACOS($data[$i]['COSECHA_SACOS']);
+          $cosecha->setCOSECHAFECHA_REGISTRO($data[$i]['COSECHAFECHA_REGISTRO']);
+
+          array_push($lista,$cosecha);
+          }
+      return $lista;
+      } catch (SQLException $e) {
+          throw new Exception('Primary key is null');
+      return null;
+      }
+  }
+
       public function insertarConsulta($sql){
           $this->cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sentencia=$this->cn->prepare($sql);

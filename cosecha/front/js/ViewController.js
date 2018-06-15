@@ -155,7 +155,7 @@ function preCacaotero_has_cultivoInsert(idForm){
                      if(result=="true"){            
  			alert("Cacaotero_has_cultivo registrado con éxito");
                      }else{
-                        alert("Hubo un errror en la inserción ( u.u)\n"+result);
+                        alert("El cacaotero se encuentra asignado a otro cultivo\n");
                      } 		}else{
  			alert("Hubo un errror interno ( u.u)\n"+result);
  		}

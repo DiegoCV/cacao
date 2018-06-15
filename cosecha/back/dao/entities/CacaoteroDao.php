@@ -138,6 +138,7 @@ $contraseña=$cacaotero->getContraseña();
       }
   }
 
+
       public function insertarConsulta($sql){
           $this->cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sentencia=$this->cn->prepare($sql);

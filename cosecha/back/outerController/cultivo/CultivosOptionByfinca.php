@@ -7,15 +7,13 @@
 
 //    Bastará decir que soy Juan Pablo Castel, el pintor que mató a María Iribarne...  \\
 include_once realpath('../../innerController/CultivoController.php');
-
-$list=CultivoController::listAll();
+session_start();
+$list=CultivoController::CultivosOptionByfinca($_SESSION['finca']);
 $rta="";
+$cont = 1;
 foreach ($list as $obj => $Cultivo) {	
-	$rta.="<tr>\n";
-	$rta.="<td>".$Cultivo->getidCULTIVO()."</td>\n";
-	$rta.="<td>".$Cultivo->getSECTOR_idSECTOR()->getidSECTOR()."</td>\n";
-	$rta.="<td>".$Cultivo->getCULTIVO_FECHASIEMBRA()."</td>\n";
-	$rta.="</tr>\n";
+	$rta.='<option value = "'.$Cultivo->getidCULTIVO().'">'.$Cultivo->getSECTOR_idSECTOR()->getFINCA_idFINCA()->getnombre().' Cultivo n° '.$cont.'</option>';
+	$cont++;
 }
 echo $rta;
 

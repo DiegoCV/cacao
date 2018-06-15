@@ -115,7 +115,13 @@ class CosechaController {
      $cosechaDao->close();
      return $result;
   }
-
+  public static function CosechaListByFinca($idfinca){
+     $FactoryDao=new FactoryDao(self::getGestorDefault());
+     $cosechaDao =$FactoryDao->getcosechaDao(self::getDataBaseDefault());
+     $result = $cosechaDao->CosechaListByFinca($idfinca);
+     $cosechaDao->close();
+     return $result;
+  }
 
 }
 //That´s all folks!

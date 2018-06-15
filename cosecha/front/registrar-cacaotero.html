@@ -6,7 +6,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 -->
 
 <!DOCTYPE html>
-<html>
+<html> 
 
 <head>
     
@@ -26,8 +26,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <link rel="stylesheet" href="css/font-icon-style.css">
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
 
+
     <!-- Core stylesheets -->
     <link rel="stylesheet" href="css/form.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    <script src="js/Ajax.js "></script>
+    <script src="js/ViewController.js "></script>
 </head>
 
 <body>
@@ -122,10 +126,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                                 
                 <li><a href="#forms" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-building-o"></i>Registro </a>
                     <ul id="forms" class="collapse list-unstyled">
+                       <li><a href="registrar-sector.html">Registrar Sector</a></li>
+                        <li><a href="registrar-cultivo.html">Registrar Cultivo</a></li>  
                         <li><a href="registrar-cosecha.html">Registrar Cosecha</a></li> 
                         <li><a href="registrar-tratamiento.html">Registrar Traramiento</a></li>
-						<li><a href="registrar-evento.html">Registrar Evento</a></li> 
-						<li><a href="asignar-cacaotero.html">Asignar Cacaotero</a></li> 
+                        <li><a href="registrar-cacaotero.html">Registrar Cacaotero</a></li>  
+                        <li><a href="asignar-cacaotero.html">Asignar Cacaotero</a></li>  
                     </ul>
                 </li>                
                 <li><a href="#pages" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-file-o"></i>Reportes </a>
@@ -149,23 +155,31 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     <!--***** BASIC FORM *****-->
                     <div class="card form" id="form1">
                         <div class="card-header">
-                            <h3>Generar reporte</h3>
+                            <h3>Registrar Cacaotero</h3>
                         </div>
                         <br>
-                        <form action="../back/outerController/cultivo/exportarCsv.php">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleSelect1">Cultivo</label>
-                                        <select class="form-control" id="cultivo" name="cultivo">                                        
-                                        </select>
-										<small  class="form-text text-muted">Por favor ingrese el cultivo del reporte que desea generar.</small>
-                                    </div>                                                                       
-                                 </div>								
-                            </div> 
-                            <button type="submit" id="generar" class="btn btn-general btn-blue mr-2">Generar</button>  
-                            <button type="reset" class="btn btn-general btn-white">Cancelar</button>
-                        </form>
+                         <form role="form" id="CacaoteroInsert">
+                     
+                      <div class="form-group">
+                          <label for="Inputcargo">cargo</label>
+                          <input type="text" name="cargo" class="form-control" id="Inputcargo" placeholder="cargo">
+                       </div>
+                       <div class="form-group">
+                          <label for="Inputusuario">nombre</label>
+                          <input type="text" name="usuario" class="form-control" id="Inputusuario" placeholder="nombre">
+                       </div>
+                      <div class="form-group">
+                          <label for="Inputcedula">cedula</label>
+                          <input type="text" name="cedula" class="form-control" id="Inputcedula" placeholder="cedula">
+                       </div>
+                      
+                      <div class="form-group">
+                          <label for="InputcontraseÃ±a">fecha Nacimiento</label>
+                          <input type="date" name="fecha" class="form-control" id="InputcontraseÃ±a" >
+                       </div>
+                        <a href="javascript:preCacaoteroInsert('CacaoteroInsert')" class="btn btn-warning">Registrar</a>
+                   </form>
+                       
                     </div>                 
 
                 </div>
@@ -211,20 +225,13 @@ License URL: https://creativecommons.org/licenses/by/4.0/
             }
         });
     </script>
-      <script type="text/javascript">
+
+    <script type="text/javascript">
       $(document).ready(function () {
         $.post('../back/outerController/cultivo/CultivosOptionByfinca.php').done(function(result){
-          $('#cultivo').html(result);
+          $('#InputCULTIVO_idCULTIVO').html(result);
         });
       });
-/**
-      $('#generar').click(function(){
-            var cul = $('#cultivo').val();
-         $.post('../back/outerController/cultivo/exportarCsv.php',{'cultivo':cul}).done(function(){
-            alert('generado');
-        });
-      });
-   */
     </script>
 </body>
 
