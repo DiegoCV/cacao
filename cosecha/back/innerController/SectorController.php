@@ -117,5 +117,13 @@ class SectorController {
   }
 
 
+  public static function SectorOptionByFinca($idFinca){
+     $FactoryDao=new FactoryDao(self::getGestorDefault());
+     $sectorDao =$FactoryDao->getsectorDao(self::getDataBaseDefault());
+     $result = $sectorDao->SectorOptionByFinca($idFinca);
+     $sectorDao->close();
+     return $result;
+  }
+
 }
 //That´s all folks!

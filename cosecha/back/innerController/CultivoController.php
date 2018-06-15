@@ -111,6 +111,21 @@ class CultivoController {
      $cultivoDao->close();
      return $result;
   }
+ public static function CultivosOptionByfinca($idFinca){
+     $FactoryDao=new FactoryDao(self::getGestorDefault());
+     $cultivoDao =$FactoryDao->getcultivoDao(self::getDataBaseDefault());
+     $result = $cultivoDao->CultivosOptionByfinca($idFinca);
+     $cultivoDao->close();
+     return $result;
+  }
+
+  public static function exportarCsv(){
+     $FactoryDao=new FactoryDao(self::getGestorDefault());
+     $cultivoDao =$FactoryDao->getcultivoDao(self::getDataBaseDefault());
+     $result = $cultivoDao->exportarCsv();
+     $cultivoDao->close();
+     return $result;
+  }
 
 
 }

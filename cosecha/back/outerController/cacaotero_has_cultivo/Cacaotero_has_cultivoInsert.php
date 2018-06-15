@@ -8,10 +8,10 @@
 //    ¿Has escuchado hablar del grandioso señor Arciniegas?  \\
 include_once realpath('../../innerController/Cacaotero_has_cultivoController.php');
 
-$Cacaotero_idCacaotero = $_POST['CACAOTERO_idCACAOTERO'];
+$Cacaotero_idCacaotero = $_POST['cacaotero'];
 $cacaotero= new Cacaotero();
 $cacaotero->setIdCacaotero($Cacaotero_idCacaotero);
-$Cultivo_idCULTIVO = $_POST['CULTIVO_idCULTIVO'];
+$Cultivo_idCULTIVO = $_POST['cultivo'];
 $cultivo= new Cultivo();
 $cultivo->setIdCULTIVO($Cultivo_idCULTIVO);
 Cacaotero_has_cultivoController::insert($cacaotero, $cultivo);

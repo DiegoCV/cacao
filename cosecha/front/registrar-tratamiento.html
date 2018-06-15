@@ -4,7 +4,7 @@ author URL: https://boostraptheme.com
 License: Creative Commons Attribution 4.0 Unported
 License URL: https://creativecommons.org/licenses/by/4.0/
 -->
-
+ 
 <!DOCTYPE html>
 <html>
 
@@ -28,6 +28,8 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
     <!-- Core stylesheets -->
     <link rel="stylesheet" href="css/form.css">
+     <script src="js/Ajax.js "></script>
+    <script src="js/ViewController.js "></script>
 </head>
 
 <body>
@@ -149,36 +151,33 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     <!--***** BASIC FORM *****-->
                     <div class="card form" id="form1">
                         <div class="card-header">
-                            <h3>Registrar Tratamiento</h3>
+                            <h3>Agregar Aspectos a la agenda</h3>
                         </div>
                         <br>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Fecha</label>
-                                        <input class="form-control" type="date" value="" name="fecha" id="fecha">
-                                        <small id="emailHelp" class="form-text text-muted">Por favor ingrese la fecha del tratamiento a registrar.</small>
-                                    </div>                                          
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleSelect1">Cultivo</label>
-                                        <select class="form-control" id="cultivo" name="cultivo">                                        
-                                        </select>
-										<small  class="form-text text-muted">Por favor ingrese el cultivo al que pertenece el tratamiento.</small>
-                                    </div>                                                                       
-                                 </div>
-								<div class="col-md-12">
-									<div class="form-group">
-                                        <label for="exampleTextarea">Observaciones</label>
-                                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                                    </div>
-								</div>
-                            </div> 
-                            <button type="submit" class="btn btn-general btn-blue mr-2">Registrar</button>  
-                            <button type="reset" class="btn btn-general btn-white">Cancelar</button>
-                        </form>
+                         <form role="form" id="AgendaInsert">
+                      <div class="form-group">
+                          <label for="InputCULTIVO_idCULTIVO">CULTIVO_idCULTIVO</label>
+                          <select name="CULTIVO_idCULTIVO" class="form-control" id="InputCULTIVO_idCULTIVO" >
+                              
+                          </select>                         
+                       </div>
+                      <div class="form-group">
+                          <label for="InputAGENDA_COMENTARIO">COMENTARIO</label>
+                          <textarea name="AGENDA_COMENTARIO" class="form-control" id="InputAGENDA_COMENTARIO"></textarea>
+                       </div>
+                      <div class="form-group">
+                          <label for="InputAGENDAFECHA_REGISTRO">AGENDAFECHA_REGISTRO</label>
+                          <input type="date" name="AGENDAFECHA_REGISTRO" class="form-control" id="InputAGENDAFECHA_REGISTRO" placeholder="AGENDAFECHA_REGISTRO">
+                       </div>
+                      <div class="form-group">
+                          <label for="InputAGENDA_TIPO">AGENDA_TIPO</label>
+                          <select name="AGENDA_TIPO" class="form-control" id="InputAGENDA_TIPO" >
+                              <option value="Tratamiento">Tratamiento</option>
+                              <option value="Nota">Nota</option>
+                          </select>
+                       </div>
+                        <a href="javascript:preAgendaInsert('AgendaInsert')" class="btn btn-warning">Registrar</a>
+                   </form>
                     </div>                 
 
                 </div>
@@ -223,6 +222,13 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                } 
             }
         });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $.post('../back/outerController/cultivo/CultivosOptionByfinca.php').done(function(result){
+          $('#InputCULTIVO_idCULTIVO').html(result);
+        });
+      });
     </script>
 </body>
 

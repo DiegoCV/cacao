@@ -8,7 +8,7 @@
 //    Me pagan USD 10,000 por cada frase que invento. 20,000 por las más tontas  \\
 include_once realpath('../../innerController/AgendaController.php');
 
-$idAGENDA = $_POST['idAGENDA'];
+$idAGENDA = null;
 $Cultivo_idCULTIVO = $_POST['CULTIVO_idCULTIVO'];
 $cultivo= new Cultivo();
 $cultivo->setIdCULTIVO($Cultivo_idCULTIVO);

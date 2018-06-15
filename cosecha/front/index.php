@@ -36,73 +36,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 <!--====================================================
                          MAIN NAVBAR
 ======================================================-->        
-    <header class="header">
-        <nav class="navbar navbar-expand-lg ">            
-            <div class="container-fluid ">
-                <div class="navbar-holder d-flex align-items-center justify-content-between">
-                    <div class="navbar-header">
-                        <a href="index.html" class="navbar-brand">
-                            <div class="brand-text brand-big hidden-lg-down"><h3>Cacao Beans <i class="fa fa-lemon-o"></i></h3></div>
-                            <div class="brand-text brand-small"><h3><i class="fa fa-lemon-o"></i></h3></div>
-                        </a>
-                        <a id="toggle-btn" href="#" class="menu-btn active">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </div>
-                </div>
-                <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                    <!-- Expand-->
-                    <li class="nav-item d-flex align-items-center full_scr_exp"><a class="nav-link" href="#"><img src="img/expand.png" onclick="toggleFullScreen(document.body)" class="img-fluid" alt=""></a></li>
-                    <!-- Perfil-->
-                    <li class="nav-item dropdown"><a id="profile" class="nav-link logout" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/usuario.png" alt="..." class="img-fluid rounded-circle" style="height: 30px; width: 30px;"></a>
-                        <ul aria-labelledby="profile" class="dropdown-menu profile">
-                            <li>
-                                <a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"> <img src="img/usuario.png" alt="..." class="img-fluid rounded-circle"></div>
-                                    <div class="msg-body">
-                                        <h3 class="h5">Administrador</h3><span>administrador@gmail.com</span>
-                                    </div>
-                                </a>
-                                <hr>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="profile.html" class="dropdown-item">
-                                    <div class="notification">
-                                        <div class="notification-content"><i class="fa fa-user "></i>Perfil</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="profile.html" class="dropdown-item">
-                                    <div class="notification">
-                                        <div class="notification-content"><i class="fa fa-envelope-o"></i>Mensajes</div> 
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="profile.html" class="dropdown-item">
-                                    <div class="notification">
-                                        <div class="notification-content"><i class="fa fa-cog"></i>Editar</div>
-                                    </div>
-                                </a>
-                                <hr>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="profile.html" class="dropdown-item">
-                                    <div class="notification">
-                                        <div class="notification-content"><i class="fa fa-power-off"></i>Cerrar sesion</div>
-                                    </div>
-                                </a> 
-                            </li>
-                        </ul>
-                    </li>                   
-                </ul> 
-            </div>
-        </nav>
-    </header>
-
+<?php
+    include 'header.php';
+?>
 
 <!--====================================================
                         PAGE CONTENT

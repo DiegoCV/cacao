@@ -139,6 +139,36 @@ $fINCA_idFINCA=$sector->getFINCA_idFINCA()->getIdFinca();
       }
   }
 
+public function SectorOptionByFinca($idfinca){
+      $lista = array();
+      try {
+          $sql ="SELECT `idSECTOR`, `SECTOR_LARGO`, `SECTOR_ANCHO`, `FINCA_idFINCA`, `nombre`
+          FROM `sector`
+          INNER JOIN `finca` 
+          ON (`sector`.`FINCA_idFINCA` = `finca`.`idFinca`)
+          WHERE `FINCA_idFINCA` = $idfinca";
+          $data = $this->ejecutarConsulta($sql);
+          for ($i=0; $i < count($data) ; $i++) {
+              $sector= new Sector();
+          $sector->setIdSECTOR($data[$i]['idSECTOR']);
+          $sector->setSECTOR_LARGO($data[$i]['SECTOR_LARGO']);
+          $sector->setSECTOR_ANCHO($data[$i]['SECTOR_ANCHO']);
+           $finca = new Finca();
+           $finca->setIdFinca($data[$i]['FINCA_idFINCA']);
+           $finca->setnombre($data[$i]['nombre']);
+           $sector->setFINCA_idFINCA($finca);
+
+          array_push($lista,$sector);
+          }
+      return $lista;
+      } catch (SQLException $e) {
+          throw new Exception('Primary key is null');
+      return null;
+      }
+  }
+
+
+
       public function insertarConsulta($sql){
           $this->cn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
           $sentencia=$this->cn->prepare($sql);

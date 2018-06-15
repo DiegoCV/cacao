@@ -158,9 +158,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                         <br>
                         <form role="form" id="CosechaInsert">
                       <div class="form-group">
-                          <label for="InputCULTIVO_idCULTIVO">CULTIVO_idCULTIVO</label>
+                          <label for="InputCULTIVO_idCULTIVO">CULTIVO</label>
                           <select name="CULTIVO_idCULTIVO" class="form-control" id="InputCULTIVO_idCULTIVO">
-                            <option>cosecha1</option>
+                          
                           </select>
                        </div>
                       <div class="form-group">
@@ -218,6 +218,14 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                } 
             }
         });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $.post('../back/outerController/cultivo/CultivosOptionByfinca.php').done(function(result){
+          $('#InputCULTIVO_idCULTIVO').html(result);
+        });
+      });
     </script>
 </body>
 

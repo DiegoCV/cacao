@@ -8,7 +8,7 @@
 //    Dispongo de doce horas de adelanto, puedo de decárselas a ella  \\
 include_once realpath('../../innerController/CultivoController.php');
 
-$idCULTIVO = $_POST['idCULTIVO'];
+$idCULTIVO = null;
 $Sector_idSECTOR = $_POST['SECTOR_idSECTOR'];
 $sector= new Sector();
 $sector->setIdSECTOR($Sector_idSECTOR);

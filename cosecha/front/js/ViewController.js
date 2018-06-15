@@ -35,7 +35,8 @@ function preAdministradorInsert(idForm){
      //Consideramos buena práctica no manejar código HTML antes de este punto.
  		if(state=="success"){
                      if(result=="true"){            
- 			alert("Administrador registrado con éxito");
+ 			//alert("Administrador registrado con éxito");
+            window.location.href = "login.html";
                      }else{
                         alert("Hubo un errror en la inserción ( u.u)\n"+result);
                      } 		}else{
@@ -387,6 +388,7 @@ function preFincaInsert(idForm){
  		if(state=="success"){
                      if(result=="true"){            
  			alert("Finca registrado con éxito");
+            window.location.href ="login2.html";
                      }else{
                         alert("Hubo un errror en la inserción ( u.u)\n"+result);
                      } 		}else{

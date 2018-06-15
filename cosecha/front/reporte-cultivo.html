@@ -163,7 +163,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                                     </div>                                                                       
                                  </div>								
                             </div> 
-                            <button type="submit" class="btn btn-general btn-blue mr-2">Generar</button>  
+                            <button type="submit" id="generar" class="btn btn-general btn-blue mr-2">Generar</button>  
                             <button type="reset" class="btn btn-general btn-white">Cancelar</button>
                         </form>
                     </div>                 
@@ -210,6 +210,19 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                } 
             }
         });
+    </script>
+      <script type="text/javascript">
+      $(document).ready(function () {
+        $.post('../back/outerController/cultivo/CultivosOptionByfinca.php').done(function(result){
+          $('#cultivo').html(result);
+        });
+      });
+
+      $('#generar').click(function(){
+         $.post('../back/outerController/cultivo/exportarCsv.php').done(function(result){
+          $('#cultivo').html(result);
+        });
+      });
     </script>
 </body>
 

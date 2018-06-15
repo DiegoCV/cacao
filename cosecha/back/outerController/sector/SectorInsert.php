@@ -8,10 +8,11 @@
 //    Todos los animales son iguales, pero algunos animales son más iguales que otros  \\
 include_once realpath('../../innerController/SectorController.php');
 
-$idSECTOR = $_POST['idSECTOR'];
+$idSECTOR = null;
 $SECTOR_LARGO = $_POST['SECTOR_LARGO'];
 $SECTOR_ANCHO = $_POST['SECTOR_ANCHO'];
-$Finca_idFinca = $_POST['FINCA_idFINCA'];
+session_start();
+$Finca_idFinca = $_SESSION['finca'];
 $finca= new Finca();
 $finca->setIdFinca($Finca_idFinca);
 SectorController::insert($idSECTOR, $SECTOR_LARGO, $SECTOR_ANCHO, $finca);

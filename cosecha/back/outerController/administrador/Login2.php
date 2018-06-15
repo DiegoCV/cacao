@@ -4,7 +4,7 @@
              \(x.x )/ Anarchy \( x.x)/
               ------------------------
  */
-
+ 
 //    Damos paso a la anarquía...  \\
 include_once realpath('../../innerController/AdministradorController.php');
 

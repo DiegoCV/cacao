@@ -8,13 +8,14 @@
 //    Ya no la quiero, es cierto, pero tal vez la quiero. Es tan corto el amor, y es tan largo el olvido.  \\
 include_once realpath('../../innerController/FincaController.php');
 
-$idFinca = $_POST['idFinca'];
+$idFinca = null;
 $nombre = $_POST['nombre'];
 $dueño = $_POST['dueño'];
-$Administrador_id_ADMINISTRADOR = $_POST['ADMINISTRADOR_id_ADMINISTRADOR'];
+session_start();
+$Administrador_id_ADMINISTRADOR = $_SESSION["ADMIN_ID"];
 $administrador= new Administrador();
 $administrador->setId_ADMINISTRADOR($Administrador_id_ADMINISTRADOR);
 FincaController::insert($idFinca, $nombre, $dueño, $administrador);
-echo "true";
+echo 'true';
 
 //That�s all folks!

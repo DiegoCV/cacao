@@ -6,7 +6,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 -->
 
 <!DOCTYPE html>
-<html>
+<html> 
 
 <head>
     
@@ -26,9 +26,11 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <link rel="stylesheet" href="css/font-icon-style.css">
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
 
+
     <!-- Core stylesheets -->
     <link rel="stylesheet" href="css/form.css">
-     <script src="js/Ajax.js "></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    <script src="js/Ajax.js "></script>
     <script src="js/ViewController.js "></script>
 </head>
 
@@ -121,7 +123,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
             <!-- Sidebar Navidation Menus-->
             <ul class="list-unstyled">
                 <li class="active"> <a href="index.html"><i class="icon-home"></i>Inicio</a></li>
-                              
+                                
                 <li><a href="#forms" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-building-o"></i>Registro </a>
                     <ul id="forms" class="collapse list-unstyled">
                         <li><a href="registrar-cosecha.html">Registrar Cosecha</a></li> 
@@ -151,37 +153,23 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     <!--***** BASIC FORM *****-->
                     <div class="card form" id="form1">
                         <div class="card-header">
-                            <h3>Asignar Cacaotero</h3>
+                            <h3>Registrar Cultivo</h3>
                         </div>
                         <br>
-                        <form role="form" id="Cacaotero_has_cultivoInsert">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Cacaotero</label>
-                                        <select class="form-control" id="cacaotero" name="cacaotero">                                        
-                                        </select>
-                                        <small id="emailHelp" class="form-text text-muted">Por favor ingrese el cacaotero que desea asignar.</small>
-                                    </div>                                          
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="exampleSelect1">Cultivo</label>
-                                        <select class="form-control" id="cultivo" name="cultivo">                                        
-                                        </select>
-										<small  class="form-text text-muted">Por favor ingrese el cultivo al que pertenece la coseha.</small>
-                                    </div>                                                                       
-                                 </div>
-								<div class="col-md-12">
-									<div class="form-group">
-                                        <label for="exampleTextarea">Observaciones</label>
-                                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                                    </div>
-								</div>
-                            </div> 
-                             <a href="javascript:preCacaotero_has_cultivoInsert('Cacaotero_has_cultivoInsert')" class="btn btn-warning">Registrar</a>
-                            <button type="reset" class="btn btn-general btn-white">Cancelar</button>
-                        </form>
+                          <form role="form" id="CultivoInsert">
+                      <div class="form-group">
+                          <label for="InputSECTOR_idSECTOR">SECTOR_idSECTOR</label>
+                          <select name="SECTOR_idSECTOR" class="form-control" id="InputSECTOR_idSECTOR" >
+                              
+                          </select>
+                       </div>
+                      <div class="form-group">
+                          <label for="InputCULTIVO_FECHASIEMBRA">CULTIVO_FECHASIEMBRA</label>
+                          <input type="date" name="CULTIVO_FECHASIEMBRA" class="form-control" id="InputCULTIVO_FECHASIEMBRA" placeholder="CULTIVO_FECHASIEMBRA">
+                       </div>
+                        <a href="javascript:preCultivoInsert('CultivoInsert')" class="btn btn-warning">Registrar</a>
+                   </form>
+                       
                     </div>                 
 
                 </div>
@@ -230,12 +218,8 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
     <script type="text/javascript">
       $(document).ready(function () {
-        $.post('../back/outerController/cultivo/CultivosOptionByfinca.php').done(function(result){
-          $('#cultivo').html(result);
-        });
-
-         $.post('../back/outerController/cacaotero/CacaoteroList.php').done(function(result){
-          $('#cacaotero').html(result);
+        $.post('../back/outerController/sector/SectorOptionByFinca.php').done(function(result){
+          $('#InputSECTOR_idSECTOR').html(result);
         });
       });
     </script>
