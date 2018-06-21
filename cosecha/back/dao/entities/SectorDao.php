@@ -1,15 +1,15 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    No es una cola ni es una pila, es tu proyecto que no compila  \\
+//    No es una cola ni es una pila, es tu proyecto que no compila  //
 
-include_once realpath('../..').'\dao\interfaz\ISectorDao.php';
-include_once realpath('../..').'\dto\Sector.php';
-include_once realpath('../..').'\dto\Finca.php';
+include_once realpath('../..').'/dao/interfaz/ISectorDao.php';
+include_once realpath('../..').'/dto/Sector.php';
+include_once realpath('../..').'/dto/Finca.php';
 
 class SectorDao implements ISectorDao{
 

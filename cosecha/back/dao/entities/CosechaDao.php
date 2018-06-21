@@ -1,15 +1,15 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    ¿Y si mejor estudias comunicación?  \\
+//    ¿Y si mejor estudias comunicación?  //
 
-include_once realpath('../..').'\dao\interfaz\ICosechaDao.php';
-include_once realpath('../..').'\dto\Cosecha.php';
-include_once realpath('../..').'\dto\Cultivo.php';
+include_once realpath('../..').'/dao/interfaz/ICosechaDao.php';
+include_once realpath('../..').'/dto/Cosecha.php';
+include_once realpath('../..').'/dto/Cultivo.php';
 
 class CosechaDao implements ICosechaDao{
 

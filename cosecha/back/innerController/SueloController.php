@@ -1,17 +1,17 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    Me pagan USD 10,000 por cada frase que invento. 20,000 por las más tontas  \\
+//    Me pagan USD 10,000 por cada frase que invento. 20,000 por las más tontas  //
 
-require_once realpath("../..").'\innerController\GlobalController.php';
-require_once realpath("../..").'\dao\interfaz\IFactoryDao.php';
-require_once realpath("../..").'\dto\Suelo.php';
-require_once realpath("../..").'\dao\interfaz\ISueloDao.php';
-require_once realpath("../..").'\dto\Finca.php';
+require_once realpath("../..").'/innerController/GlobalController.php';
+require_once realpath("../..").'/dao/interfaz/IFactoryDao.php';
+require_once realpath("../..").'/dto/Suelo.php';
+require_once realpath("../..").'/dao/interfaz/ISueloDao.php';
+require_once realpath("../..").'/dto/Finca.php';
 
 class SueloController {
 

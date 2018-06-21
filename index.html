@@ -79,6 +79,8 @@
 			</div>
 		</div>
 	</header>
+	
+	<!--
 	<section id="servicios">
 		<div class="cut cut-top"></div>
 		<div class="container">
@@ -101,7 +103,7 @@
 							<h4 class="white heading small-heading no-margin regular">del analisis del cacao.</h4>
 							<a href="#" class="btn btn-white-fill expand">Ingresar</a>
 						</div>
-					</div> 
+					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="intro-table intro-table-hover3">
@@ -109,7 +111,7 @@
 						<div class="bottom">
 							<h4 class="white heading small-heading no-margin regular">Informate y registra</h4>
 							<h4 class="white heading small-heading no-margin regular">tus proximas cosechas.</h4>
-							<a href="cosecha/front/Login.html" class="btn btn-white-fill expand">Ingresar</a>
+							<a href="#" class="btn btn-white-fill expand">Ingresar</a>
 						</div>
 					</div>
 				</div>
@@ -160,47 +162,21 @@
 		</div>
 	</section>
 	
+	-->
 	
-	<!--
-	<section id="services" class="section section-padded">
+	<section id="servicios" class="section section-padded">
 		<div class="container">
 			<div class="row text-center title">
-				<h2>Services</h2>
-				<h4 class="light muted">Achieve the best results with our wide variety of training options!</h4>
-			</div>
-			<div class="row services">
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="img/icons/heart-blue.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Cardio Training</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="img/icons/guru-blue.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Yoga Pilates</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="img/icons/weight-blue.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">Power Training</h4>
-						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
-					</div>
-				</div>
-			</div>
+				<h2>Servicios</h2>
+				<h4 style="text-align:justify" class="light muted">Nos encargamos de la gestión y administración del cacao, pasando por sus diferentes procesos, abordando los requerimientos de nuestros clientes para brindar el mejor servicio del mercado.</h4>
+				<h4 style="text-align:justify" class="light muted">Somos una cuenta especial creada por ley para el recaudo y manejo de los recursos provenientes de la Cuota de Fomento Cacaotero, y cuyo propósito es la financiación de programas y proyectos de beneficio para la actividad cacaocultora nacional. El Gobierno Nacional a través del Ministerio de Agricultura y Desarrollo Rural contrata con la Federación Nacional de Cacaoteros, la administración, recaudo e inversión de la Cuota de Fomento.</h4>
+				<h4 style="text-align:justify" class="light muted">Con los trabajos adelantados se pretende tener un sector cada día más competitivo, que responda a las exigencias de la industria nacional y extranjera, teniendo en cuenta que la globalización es un aspecto que atañe a toda la economía y que involucra a pequeños, medianos y grandes productores.</h4>
+				<br><br><br><br><br><br><br>
+			</div>			
 		</div>
 		<div class="cut cut-bottom"></div>
 	</section>
-	-->
+	
 	<!--
 	
 	<section id="team" class="section gray-bg">
@@ -347,12 +323,27 @@
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
 				<h3 class="white">Ingresar</h3>
-				<form action="" class="popup-form">
-					<input type="text" class="form-control form-white" placeholder="Usuario">
-					<input type="password" class="form-control form-white" placeholder="Contraseña">				
-					
-					<button type="submit" class="btn btn-submit">Aceptar</button>
-				</form>
+				<form role="form" method="post" action="cosecha/back/outerController/administrador/Login.php">
+                      <div class="form-group">
+                          <label for="InputADMINISTRADOR_USER">ADMINISTRADOR_USER</label>
+                          <input type="text" name="ADMINISTRADOR_USER" class="form-control" id="InputADMINISTRADOR_USER" placeholder="ADMINISTRADOR_USER" required>
+                       </div>
+                      <div class="form-group">
+                          <label for="InputADMINISTRADOR_PASS">ADMINISTRADOR_PASS</label>
+                          <input type="text" name="ADMINISTRADOR_PASS" class="form-control" id="InputADMINISTRADOR_PASS" placeholder="ADMINISTRADOR_PASS" required>
+                       </div>
+                       <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                                <input id="rememberMe" type="checkbox" >
+                                <label for="rememberMe">Recordar</label>
+                            </div>
+                            <div class="col-sm-5 text-right">
+                            <a href="javascript:cargaContenido('container','AdministradorInsert.html')">Crear una cuentat</a>
+                        </div>       
+                        </div>
+                        </br>
+                        <button type="submit" class="btn btn-warning">Ingresar</button>
+                   </form>
 			</div>
 		</div>
 	</div>
@@ -362,7 +353,7 @@
 				<div class="col-sm-6 text-center-mobile">
 					<h3 class="white">Conocenos!</h3>
 					<h5 class="light regular white">Ven y conoce todo el proceso de gestión del cacao.</h5>
-					<a href="#" class="btn btn-blue ripple trial-button">Escribenos</a>
+					<a target="_blank" href="https://api.whatsapp.com/send?phone=573102899445" class="btn btn-blue ripple trial-button">Escribenos</a>
 				</div>
 				<div class="col-sm-6 text-center-mobile">
 					<h3 class="white">Nustros Horarios de Atención <span class="open-blink"></span></h3>

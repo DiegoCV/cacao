@@ -1,17 +1,17 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevó a conocer el hielo.   \\
+//    Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevó a conocer el hielo.   //
 
-require_once realpath("../..").'\innerController\GlobalController.php';
-require_once realpath("../..").'\dao\interfaz\IFactoryDao.php';
-require_once realpath("../..").'\dto\Cosecha.php';
-require_once realpath("../..").'\dao\interfaz\ICosechaDao.php';
-require_once realpath("../..").'\dto\Cultivo.php';
+require_once realpath("../..").'/innerController/GlobalController.php';
+require_once realpath("../..").'/dao/interfaz/IFactoryDao.php';
+require_once realpath("../..").'/dto/Cosecha.php';
+require_once realpath("../..").'/dao/interfaz/ICosechaDao.php';
+require_once realpath("../..").'/dto/Cultivo.php';
 
 class CosechaController {
 

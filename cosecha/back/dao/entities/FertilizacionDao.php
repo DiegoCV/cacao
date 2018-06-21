@@ -1,17 +1,17 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    Quédate con quien te quiera por tu back-end, no por tu front-end  \\
+//    Quédate con quien te quiera por tu back-end, no por tu front-end  //
 
-include_once realpath('../..').'\dao\interfaz\IFertilizacionDao.php';
-include_once realpath('../..').'\dto\Fertilizacion.php';
-include_once realpath('../..').'\dto\Suelo.php';
-include_once realpath('../..').'\dto\Fertilizante.php';
-include_once realpath('../..').'\dto\Cacaotero.php';
+include_once realpath('../..').'/dao/interfaz/IFertilizacionDao.php';
+include_once realpath('../..').'/dto/Fertilizacion.php';
+include_once realpath('../..').'/dto/Suelo.php';
+include_once realpath('../..').'/dto/Fertilizante.php';
+include_once realpath('../..').'/dto/Cacaotero.php';
 
 class FertilizacionDao implements IFertilizacionDao{
 

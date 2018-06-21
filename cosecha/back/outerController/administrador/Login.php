@@ -6,6 +6,7 @@
  */
 
 //    Damos paso a la anarquía...  \\
+   
 include_once realpath('../../innerController/AdministradorController.php');
 
 $ADMINISTRADOR_USER = $_POST['ADMINISTRADOR_USER'];
@@ -17,9 +18,6 @@ setcookie("id_ADMINISTRADOR","$id_ADMINISTRADOR");
 session_start();
 $_SESSION['ADMIN_ID']=$id_ADMINISTRADOR;
 $_SESSION['ADMIN_USER']=$administrador->getADMINISTRADOR_USER();
-echo '<script language="javascript">window.location="../../../front/login2.html"</script>';
-}else{
-echo '<script language="javascript">window.location="../../../login.html"</script>';
+echo '<script language="javascript">window.location="../../../../principal.html"</script>';
 }
-
-//That´s all folks!
+?>

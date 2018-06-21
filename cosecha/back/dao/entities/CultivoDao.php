@@ -1,16 +1,16 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    No se fije en el corte de cabello, soy mucho muy rico  \\
+//    No se fije en el corte de cabello, soy mucho muy rico  //
 
-include_once realpath('../..').'\dao\interfaz\ICultivoDao.php';
-include_once realpath('../..').'\dto\Cultivo.php';
-include_once realpath('../..').'\dto\Sector.php';
-include_once realpath('../..').'\dto\Finca.php';
+include_once realpath('../..').'/dao/interfaz/ICultivoDao.php';
+include_once realpath('../..').'/dto/Cultivo.php';
+include_once realpath('../..').'/dto/Sector.php';
+include_once realpath('../..').'/dto/Finca.php';
 
 
 

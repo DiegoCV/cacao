@@ -1,15 +1,15 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    No te olvides de quitar mis comentarios  \\
+//    No te olvides de quitar mis comentarios  //
 
-include_once realpath('../..').'\dao\interfaz\ISueloDao.php';
-include_once realpath('../..').'\dto\Suelo.php';
-include_once realpath('../..').'\dto\Finca.php';
+include_once realpath('../..').'/dao/interfaz/ISueloDao.php';
+include_once realpath('../..').'/dto/Suelo.php';
+include_once realpath('../..').'/dto/Finca.php';
 
 class SueloDao implements ISueloDao{
 

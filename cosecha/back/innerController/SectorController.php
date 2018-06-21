@@ -1,17 +1,17 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    Ojos de perro azul  \\
+//    Ojos de perro azul  //
 
-require_once realpath("../..").'\innerController\GlobalController.php';
-require_once realpath("../..").'\dao\interfaz\IFactoryDao.php';
-require_once realpath("../..").'\dto\Sector.php';
-require_once realpath("../..").'\dao\interfaz\ISectorDao.php';
-require_once realpath("../..").'\dto\Finca.php';
+require_once realpath("../..").'/innerController/GlobalController.php';
+require_once realpath("../..").'/dao/interfaz/IFactoryDao.php';
+require_once realpath("../..").'/dto/Sector.php';
+require_once realpath("../..").'/dao/interfaz/ISectorDao.php';
+require_once realpath("../..").'/dto/Finca.php';
 
 class SectorController {
 

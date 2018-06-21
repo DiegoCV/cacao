@@ -1,0 +1,216 @@
+<!--
+author: Boostraptheme
+author URL: https://boostraptheme.com
+License: Creative Commons Attribution 4.0 Unported
+License URL: https://creativecommons.org/licenses/by/4.0/
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <title>Cosecha </title>
+    <link rel="shortcut icon" href="img/logo.jpg">
+    
+    <!-- global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-icon-style.css">
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+
+    <!-- Core stylesheets -->
+    <link rel="stylesheet" href="css/ui-elements/card.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body> 
+
+<!--====================================================
+                         MAIN NAVBAR
+======================================================-->        
+    <header class="header">
+        <nav class="navbar navbar-expand-lg ">            
+            <div class="container-fluid ">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <div class="navbar-header">
+                        <a href="index.html" class="navbar-brand">
+                            <div class="brand-text brand-big hidden-lg-down"><h3>Cacao Beans <i class="fa fa-lemon-o"></i></h3></div>
+                            <div class="brand-text brand-small"><h3><i class="fa fa-lemon-o"></i></h3></div>
+                        </a>
+                        <a id="toggle-btn" href="#" class="menu-btn active">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                    <!-- Expand-->
+                    <li class="nav-item d-flex align-items-center full_scr_exp"><a class="nav-link" href="#"><img src="img/expand.png" onclick="toggleFullScreen(document.body)" class="img-fluid" alt=""></a></li>
+                    <!-- Perfil-->
+                    <li class="nav-item dropdown"><a id="profile" class="nav-link logout" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/usuario.png" alt="..." class="img-fluid rounded-circle" style="height: 30px; width: 30px;"></a>
+                        <ul aria-labelledby="profile" class="dropdown-menu profile">
+                            <li>
+                                <a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                    <div class="msg-profile"> <img src="img/usuario.png" alt="..." class="img-fluid rounded-circle"></div>
+                                    <div class="msg-body">
+                                        <h3 class="h5">Administrador</h3><span>administrador@gmail.com</span>
+                                    </div>
+                                </a>
+                                <hr>
+                            </li>
+                            <li>
+                                <a rel="nofollow" href="profile.html" class="dropdown-item">
+                                    <div class="notification">
+                                        <div class="notification-content"><i class="fa fa-user "></i>Perfil</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" href="profile.html" class="dropdown-item">
+                                    <div class="notification">
+                                        <div class="notification-content"><i class="fa fa-envelope-o"></i>Mensajes</div> 
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" href="profile.html" class="dropdown-item">
+                                    <div class="notification">
+                                        <div class="notification-content"><i class="fa fa-cog"></i>Editar</div>
+                                    </div>
+                                </a>
+                                <hr>
+                            </li>
+                            <li id="sesion">
+                                <a   class="dropdown-item">
+                                    <div class="notification">
+                                        <div >Cerrar sesion</div>
+                                    </div>
+                                </a> 
+                            </li>
+                        </ul>
+                    </li>                   
+                </ul> 
+            </div>
+        </nav>
+    </header>
+
+
+<!--====================================================
+                        PAGE CONTENT
+======================================================-->
+<div class="page-content d-flex align-items-stretch">
+
+        <!--***** SIDE NAVBAR *****-->
+        <nav class="side-navbar">
+            <div class="sidebar-header d-flex align-items-center">
+                <div class="avatar"><img src="img/usuario.png" alt="..." class="img-fluid rounded-circle"></div>
+                <div class="title">
+                    <h1 class="h4">Administrador</h1>
+                </div>
+            </div>
+            <hr>
+            <!-- Sidebar Navidation Menus-->
+            <ul class="list-unstyled">
+                <li class="active"> <a href="index.html"><i class="icon-home"></i>Inicio</a></li>
+                                
+                <li><a href="#forms" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-building-o"></i>Registro </a>
+                    <ul id="forms" class="collapse list-unstyled">
+                        <li><a href="registrar-sector.html">Registrar Sector</a></li>
+                        <li><a href="registrar-cultivo.html">Registrar Cultivo</a></li>  
+                        <li><a href="registrar-cosecha.html">Registrar Cosecha</a></li> 
+                        <li><a href="registrar-tratamiento.html">Registrar Traramiento</a></li>
+                        <li><a href="registrar-cacaotero.html">Registrar Cacaotero</a></li>  
+                        <li><a href="asignar-cacaotero.html">Asignar Cacaotero</a></li> 
+                    </ul>
+                </li>                
+                <li><a href="#pages" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-file-o"></i>Reportes </a>
+                    <ul id="pages" class="collapse list-unstyled">
+                        <li><a href="reporte-cultivo.html">Por Cultivo</a></li> 
+                        <li><a href="historico.html">Historico</a></li>                         
+                    </ul>
+                </li>
+               
+            </ul>
+        </nav>
+        <div class="content-inner">   
+          
+ 
+            <!--***** REPORT-3 *****-->     
+            <div class="row" id="report3">
+                <div class="col-md-8">
+                    <div class="card card-c2">
+                        <table class="table table-hover">
+                          <thead>
+                            <div class="dropdown pull-right menu-sett-card"> 
+                                <a id="notifications" class="nav-link" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-ellipsis-v men"></i> 
+                                </a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu">
+                                    <li>
+                                        <a rel="nofollow" href="#" class="dropdown-item nav-link">Edit</a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#" class="dropdown-item nav-link">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#" class="dropdown-item nav-link">Support</a>
+                                    </li> 
+                                </ul>
+                            </div>
+                            <tr>
+                              <th>Cultivo</th>
+                              <th>Fecha de registro</th>
+                              <th>Porcentaje de maduracion <!-- <i class="fa fa-ellipsis-v pull-right" ></i> -->
+                              </th> 
+                            </tr>
+                          </thead>
+                          <tbody id="graficas">
+                            
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+             
+            </div> 
+
+        </div>  
+    </div>
+ 
+
+    <!--Global Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper/popper.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery.validate.min.js"></script> 
+    <script src="js/chart.min.js"></script> 
+    <script src="js/front.js"></script> 
+    
+    <!--Core Javascript -->
+    <script src="js/mychart.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.post('../back/outerController/cultivo/Cultivograf.php').done(function(result){
+                $('#graficas').html(result);
+            });
+
+        });
+
+        $('#sesion').click(function(){
+             $.post('../back/outerController/administrador/logout.php');
+         });
+    </script>
+</body>
+
+</html>

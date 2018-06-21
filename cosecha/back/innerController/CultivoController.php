@@ -1,17 +1,17 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    ¿En serio? ¿Tantos buenos frameworks y estás usando Anarchy?  \\
+//    ¿En serio? ¿Tantos buenos frameworks y estás usando Anarchy?  //
 
-require_once realpath("../..").'\innerController\GlobalController.php';
-require_once realpath("../..").'\dao\interfaz\IFactoryDao.php';
-require_once realpath("../..").'\dto\Cultivo.php';
-require_once realpath("../..").'\dao\interfaz\ICultivoDao.php';
-require_once realpath("../..").'\dto\Sector.php';
+require_once realpath("../..").'/innerController/GlobalController.php';
+require_once realpath("../..").'/dao/interfaz/IFactoryDao.php';
+require_once realpath("../..").'/dto/Cultivo.php';
+require_once realpath("../..").'/dao/interfaz/ICultivoDao.php';
+require_once realpath("../..").'/dto/Sector.php';
 
 class CultivoController {
 

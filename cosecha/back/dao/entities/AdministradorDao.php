@@ -1,14 +1,14 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    NEVERMORE  \\
+//    NEVERMORE  //
 
-include_once realpath('../..').'\dao\interfaz\IAdministradorDao.php';
-include_once realpath('../..').'\dto\Administrador.php';
+include_once realpath('../..').'/dao/interfaz/IAdministradorDao.php';
+include_once realpath('../..').'/dto/Administrador.php';
 
 class AdministradorDao implements IAdministradorDao{
 
@@ -145,6 +145,7 @@ $aDMINISTRADOR_PASS=$administrador->getADMINISTRADOR_PASS();
      * @throws NullPointerException Si los objetos correspondientes a las llaves foraneas son null
      */
   public function login($administrador){
+    echo "string2";
       $aDMINISTRADOR_USER=$administrador->getADMINISTRADOR_USER();
 $aDMINISTRADOR_PASS=$administrador->getADMINISTRADOR_PASS();
 

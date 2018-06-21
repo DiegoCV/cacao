@@ -1,14 +1,14 @@
 <?php
 /*
               -------Creado por-------
-             \(x.x )/ Anarchy \( x.x)/
+             /(x.x )/ Anarchy /( x.x)/
               ------------------------
  */
 
-//    Ella existió sólo en un sueño. Él es un poema que el poeta nunca escribió.  \\
+//    Ella existió sólo en un sueño. Él es un poema que el poeta nunca escribió.  //
 
-include_once realpath('../..').'\dao\interfaz\ICacaoteroDao.php';
-include_once realpath('../..').'\dto\Cacaotero.php';
+include_once realpath('../..').'/dao/interfaz/ICacaoteroDao.php';
+include_once realpath('../..').'/dto/Cacaotero.php';
 
 class CacaoteroDao implements ICacaoteroDao{
 
